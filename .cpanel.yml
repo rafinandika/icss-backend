@@ -3,12 +3,16 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/u1734212/public_html/bml.koniprovbkl.or.id/
     - /bin/cp .editorconfig $DEPLOYPATH
+    - /bin/cp .env.example $DEPLOYPATH
     - /bin/cp artisan $DEPLOYPATH
     - /bin/cp composer.json $DEPLOYPATH
     - /bin/cp composer.lock $DEPLOYPATH
+    - /bin/cp jsconfig.json $DEPLOYPATH
     - /bin/cp package-lock.json $DEPLOYPATH
     - /bin/cp package.json $DEPLOYPATH
     - /bin/cp phpunit.xml $DEPLOYPATH
+    - /bin/cp postcss.config.js $DEPLOYPATH
+    - /bin/cp tailwind.config.js $DEPLOYPATH
     - /bin/cp vite.config.js $DEPLOYPATH
     - /bin/cp -R app $DEPLOYPATH
     - /bin/cp -R bootstrap $DEPLOYPATH
