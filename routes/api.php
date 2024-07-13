@@ -1,5 +1,10 @@
 <?php
 
+
+use App\Http\Controllers\api\v1\AuthController;
+use App\Http\Controllers\api\v1\DosenController;
+use App\Http\Controllers\api\v1\MateriController;
+use App\Http\Controllers\api\v1\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +19,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::prefix('user')->middleware('auth:sanctum')->group(function () {
+    Route::get('/me', function (Request $request) {
+        return $request->user();
+    });
+});
+
+Route::get('/dosen', [DosenController::class, 'index']);
+Route::get('/materi', [MateriController::class, 'index']);
+Route::get('/materi/{id}', [MateriController::class, 'detail']);
+
+Route::prefix('/dosen')->middleware('auth:sanctum')->group(function () {
+    Route::get('/list', [DosenController::class, 'index']);
+    Route::get('/detail/{id}', [DosenController::class, 'detail']);
 });

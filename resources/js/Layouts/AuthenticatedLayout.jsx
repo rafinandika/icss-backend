@@ -22,13 +22,13 @@ const AuthenticatedLayout = ({ children }) => {
         <DashboardContext.Provider value={{ scrollPosition }}>
             <div className='flex flex-row w-full min-h-screen'>
                 <Sidebar />
-                <div className="flex-1 ml-72 p-5 bg-white">
+                <div className="flex-1 ml-80 p-5 bg-white">
                     <div className="p-5 bg-white">
                         {children}
                     </div>
                 </div>
-                <ToastContainer />
             </div>
+            <ToastContainer />
         </DashboardContext.Provider>
     )
 }

@@ -1,0 +1,81 @@
+{
+  "_AuthenticatedLayout-bc2dca79.js": {
+    "file": "assets/AuthenticatedLayout-bc2dca79.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_iconBase-a21c89fe.js"
+    ]
+  },
+  "_iconBase-a21c89fe.js": {
+    "file": "assets/iconBase-a21c89fe.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Admin/Dosen.jsx": {
+    "file": "assets/Dosen-73d1c2e8.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-bc2dca79.js",
+      "_iconBase-a21c89fe.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Admin/Dosen.jsx"
+  },
+  "resources/js/Pages/Admin/Mahasiswa.jsx": {
+    "file": "assets/Mahasiswa-207c3696.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-bc2dca79.js",
+      "_iconBase-a21c89fe.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Admin/Mahasiswa.jsx"
+  },
+  "resources/js/Pages/Auth/Login.jsx": {
+    "file": "assets/Login-d57092e9.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_iconBase-a21c89fe.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/Login.jsx"
+  },
+  "resources/js/Pages/Dashboard.jsx": {
+    "file": "assets/Dashboard-c47c6648.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-bc2dca79.js",
+      "_iconBase-a21c89fe.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Dashboard.jsx"
+  },
+  "resources/js/Pages/Welcome.jsx": {
+    "file": "assets/Welcome-99fddd5f.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Welcome.jsx"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-e9727253.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.jsx": {
+    "css": [
+      "assets/app-e9727253.css"
+    ],
+    "dynamicImports": [
+      "resources/js/Pages/Admin/Dosen.jsx",
+      "resources/js/Pages/Admin/Mahasiswa.jsx",
+      "resources/js/Pages/Auth/Login.jsx",
+      "resources/js/Pages/Dashboard.jsx",
+      "resources/js/Pages/Welcome.jsx"
+    ],
+    "file": "assets/app-b70f03e5.js",
+    "isEntry": true,
+    "src": "resources/js/app.jsx"
+  }
+}

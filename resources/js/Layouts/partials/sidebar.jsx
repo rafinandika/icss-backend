@@ -7,17 +7,17 @@ import {
     MdOutlinePeople,
     MdOutlineHistory,
     MdOutlineBarChart,
-    MdOutlineSettings,
     MdDocumentScanner,
     MdOutlineFileOpen,
     MdForum,
+    MdOutlineSettings,
 } from 'react-icons/md'
 
 const Sidebar = () => {
     const { user } = usePage().props.auth;
 
     return (
-        <aside className='w-72 fixed top-0 left-0 h-full'>
+        <aside className='w-80 fixed top-0 left-0 h-full'>
             <div className='flex flex-col h-full shadow-lg bg-white'>
                 <div className='flex justify-center'>
                     <img src='/images/icon.png' alt="Logo Unib" className='h-20 w-auto' />
@@ -38,9 +38,14 @@ const Sidebar = () => {
                         <h1 className='font-bold'>{user.name}</h1>
                         <h1>{user.email}</h1>
                     </div>
-                    <Link href={route('logout')} method='post' as='button' className='ms-2'>
-                        <MdOutlinePowerSettingsNew size={20} color='red' />
-                    </Link>
+                    <div className='flex flex-row'>
+                        <Link href={route('logout')} method='post' as='button' className='ms-2'>
+                            <MdOutlineSettings size={20} color='black' />
+                        </Link>
+                        <Link href={route('logout')} method='post' as='button' className='ms-2'>
+                            <MdOutlinePowerSettingsNew size={20} color='red' />
+                        </Link>
+                    </div>
                 </div>
             </div>
         </aside>
