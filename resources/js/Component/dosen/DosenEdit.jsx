@@ -99,11 +99,10 @@ export const Edit = ({ editData }) => {
             forceFormData: data.foto === null ? false :  true,
             onSuccess: (success) => {
                 toast.success(success.message);
-                // reset();
-                // handleCLose();
+                reset();
+                handleCLose();
             },
             onError: (error) => {
-                console.log({ error_nih: JSON.parse(error.error) });
                 toast.error(error.message);
             }
         })

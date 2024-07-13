@@ -1,0 +1,1 @@
+const s=(n=8)=>{for(var t="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",e=n,a="",r=0;r<e;r++){var o=Math.floor(Math.random()*t.length);a+=t.substring(o,o+1)}return a},g=n=>{const t=new Date(n),e=String(t.getUTCDate()).padStart(2,"0"),a=String(t.getUTCMonth()+1).padStart(2,"0"),r=t.getUTCFullYear();return`${e}-${a}-${r}`};export{g as f,s as r};

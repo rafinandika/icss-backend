@@ -8,3 +8,14 @@ export const randomString = (length = 8) => {
     }
     return randomstring;
 }
+
+export const formatDate = (dateString) => {
+    const date = new Date(dateString);
+
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0'); // getUTCMonth() returns month from 0-11
+    const year = date.getUTCFullYear();
+
+    const formattedDate = `${day}-${month}-${year}`;
+    return formattedDate;
+}

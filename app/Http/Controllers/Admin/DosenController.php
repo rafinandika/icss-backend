@@ -99,4 +99,13 @@ class DosenController extends Controller
 
         return redirect()->back()->withSuccess(["message" => "Berhasil mengubah data dosen"]);
     }
+
+    public function destroy($id) : RedirectResponse
+    {
+        $dosen = Dosen::find($id);
+        $user = User::find($dosen->user_id);
+        $user->delete();
+        $dosen->delete();
+        return redirect()->back()->withSuccess(["message" => "Berhasil menghapus dosen"]);
+    }
 }

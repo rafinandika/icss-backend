@@ -1,58 +1,73 @@
 {
-  "_AuthenticatedLayout-bc2dca79.js": {
-    "file": "assets/AuthenticatedLayout-bc2dca79.js",
+  "_AuthenticatedLayout-59226117.js": {
+    "file": "assets/AuthenticatedLayout-59226117.js",
     "imports": [
       "resources/js/app.jsx",
-      "_iconBase-a21c89fe.js"
+      "_react-toastify.esm-66757944.js"
     ]
   },
-  "_iconBase-a21c89fe.js": {
-    "file": "assets/iconBase-a21c89fe.js",
+  "_react-toastify.esm-66757944.js": {
+    "file": "assets/react-toastify.esm-66757944.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
+  "_usability-49a819c3.js": {
+    "file": "assets/usability-49a819c3.js"
+  },
   "resources/js/Pages/Admin/Dosen.jsx": {
-    "file": "assets/Dosen-73d1c2e8.js",
+    "file": "assets/Dosen-2914a30d.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-bc2dca79.js",
-      "_iconBase-a21c89fe.js"
+      "_AuthenticatedLayout-59226117.js",
+      "_react-toastify.esm-66757944.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Dosen.jsx"
   },
   "resources/js/Pages/Admin/Mahasiswa.jsx": {
-    "file": "assets/Mahasiswa-207c3696.js",
+    "file": "assets/Mahasiswa-ff683771.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-bc2dca79.js",
-      "_iconBase-a21c89fe.js"
+      "_AuthenticatedLayout-59226117.js",
+      "_usability-49a819c3.js",
+      "_react-toastify.esm-66757944.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Mahasiswa.jsx"
   },
-  "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-d57092e9.js",
+  "resources/js/Pages/Admin/Materi.jsx": {
+    "file": "assets/Materi-72a6db13.js",
     "imports": [
       "resources/js/app.jsx",
-      "_iconBase-a21c89fe.js"
+      "_AuthenticatedLayout-59226117.js",
+      "_react-toastify.esm-66757944.js",
+      "_usability-49a819c3.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Admin/Materi.jsx"
+  },
+  "resources/js/Pages/Auth/Login.jsx": {
+    "file": "assets/Login-d8b8b562.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_react-toastify.esm-66757944.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.jsx"
   },
   "resources/js/Pages/Dashboard.jsx": {
-    "file": "assets/Dashboard-c47c6648.js",
+    "file": "assets/Dashboard-f54c9536.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-bc2dca79.js",
-      "_iconBase-a21c89fe.js"
+      "_AuthenticatedLayout-59226117.js",
+      "_react-toastify.esm-66757944.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Dashboard.jsx"
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome-99fddd5f.js",
+    "file": "assets/Welcome-d2f385d5.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -60,21 +75,22 @@
     "src": "resources/js/Pages/Welcome.jsx"
   },
   "resources/js/app.css": {
-    "file": "assets/app-e9727253.css",
+    "file": "assets/app-f9678636.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.jsx": {
     "css": [
-      "assets/app-e9727253.css"
+      "assets/app-f9678636.css"
     ],
     "dynamicImports": [
       "resources/js/Pages/Admin/Dosen.jsx",
       "resources/js/Pages/Admin/Mahasiswa.jsx",
+      "resources/js/Pages/Admin/Materi.jsx",
       "resources/js/Pages/Auth/Login.jsx",
       "resources/js/Pages/Dashboard.jsx",
       "resources/js/Pages/Welcome.jsx"
     ],
-    "file": "assets/app-b70f03e5.js",
+    "file": "assets/app-1158bfae.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }

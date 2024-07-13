@@ -1,13 +1,15 @@
 import { Add } from '@/Component/dosen/DosenAdd'
 import { Edit } from '@/Component/dosen/DosenEdit'
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout'
-import React, { useEffect, useState } from 'react'
-import { MdDelete, MdEdit, MdEditSquare, MdOutlinePeople, MdOutlinePersonAdd } from 'react-icons/md'
+import { router } from '@inertiajs/react'
+import React, { useContext, useEffect, useState } from 'react'
+import { MdDelete, MdEdit, MdOutlinePeople, MdOutlinePersonAdd } from 'react-icons/md'
 
 
 export const DosenContext = React.createContext()
 const Dosen = ({ dosen }) => {
     const [view, setView] = useState({ type: 'loading', data: null });
+    const [del, setDelete] = useState({ data: null });
     useEffect(() => {
         if (dosen.data.length === 0) {
             setView({ type: 'kosong', data: null })
@@ -29,11 +31,11 @@ const Dosen = ({ dosen }) => {
                     </button>
                 </div>
             }
-            <DosenContext.Provider value={{ view, setView }}>
+            <DosenContext.Provider value={{ view, setView, del, setDelete }}>
                 {view.type === 'loading' && <Basic title={'Memuat data...'} spinner={true} />}
                 {view.type === 'kosong' && <Basic title={'Data dosen masih kosong'} spinner={false} />}
                 {view.type === 'add' && <Add />}
-                {view.type === 'edit' && <Edit editData={view.data}/>}
+                {view.type === 'edit' && <Edit editData={view.data} />}
                 {view.type === 'list' && <List />}
             </DosenContext.Provider>
         </AuthenticatedLayout>
@@ -53,7 +55,7 @@ const Basic = ({ title, spinner = false }) => {
 }
 
 const List = () => {
-    const { view, setView } = React.useContext(DosenContext)
+    const { view, setView, setDelete } = React.useContext(DosenContext)
     return (
         <div className="card bg-base-100 text-center shadow-xl">
             <div className='bg-gray-700 text-center text-white rounded-t-lg p-2'>
@@ -85,7 +87,7 @@ const List = () => {
                                         </label>
                                     </th>
                                     <td>
-                                    <div className="flex items-center gap-3">
+                                        <div className="flex items-center gap-3">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle h-12 w-12">
                                                     <img
@@ -102,20 +104,52 @@ const List = () => {
                                     <td>{dosen.user.email}</td>
                                     <td>{dosen.menikah ? "Menikah" : "Belum Menikah"}</td>
                                     <td>
-                                        <button className="btn btn-ghost btn-sm">Detail</button>
+                                        {/* <button className="btn btn-ghost btn-sm">Detail</button> */}
                                         <button className="btn btn-ghost btn-sm text-yellow-500" onClick={() => setView({ type: 'edit', data: dosen })}><MdEdit /></button>
-                                        <button className="btn btn-ghost btn-sm text-red-500"><MdDelete /></button>
+                                        <button className="btn btn-ghost btn-sm text-red-500" onClick={() => {
+                                            document.getElementById('modal-delete').showModal();
+                                            setDelete(dosen)
+                                        }} ><MdDelete /></button>
                                     </td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
+                <ModalDelete />
             </div>
         </div>
     );
 }
 
+const ModalDelete = () => {
+    const { del, setDelete } = useContext(DosenContext);
 
+    return (
+        <dialog id="modal-delete" className="modal" role='dialog'>
+            <div className="modal-box">
+                <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <div className='text-center mt-10'>
+                    <p className='text-center'>Apakah anda yakin ingin menghapus data dosen?</p>
+                    <p className='text-center font-bold'>"{del?.nama}"</p>
+                    <div className='text-center'>
+                        <button className='btn btn-error rounded-full mt-5 px-5' onClick={() => document.getElementById('modal-delete').close()}>Batal</button>
+                        <button className='btn btn-md rounded-full mt-5 px-5 ms-4' onClick={() => {
+                            router.delete(route('dosen.destroy', del?.id), {
+                                onSuccess: () => {
+                                    setDelete({ data: null });
+                                    document.getElementById('modal-delete').close();
+                                },
+                            });
+                        }}>Hapus</button>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    )
+}
 
 export default Dosen
