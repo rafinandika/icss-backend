@@ -1,5 +1,6 @@
 import { Link } from '@inertiajs/react'
 import React from 'react'
+import { ToastContainer } from 'react-toastify'
 
 const GuestLayout = ({ children }) => {
     return (
@@ -23,6 +24,7 @@ const GuestLayout = ({ children }) => {
                     {children}
                 </div>
             </div>
+            <ToastContainer />
         </div>
     )
 }

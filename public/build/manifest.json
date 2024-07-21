@@ -1,73 +1,87 @@
 {
-  "_AuthenticatedLayout-59226117.js": {
-    "file": "assets/AuthenticatedLayout-59226117.js",
+  "_AuthenticatedLayout-44cdb6db.js": {
+    "file": "assets/AuthenticatedLayout-44cdb6db.js",
     "imports": [
       "resources/js/app.jsx",
-      "_react-toastify.esm-66757944.js"
+      "_react-toastify.esm-74b3f8e7.js"
     ]
   },
-  "_react-toastify.esm-66757944.js": {
-    "file": "assets/react-toastify.esm-66757944.js",
+  "_react-toastify.esm-74b3f8e7.js": {
+    "file": "assets/react-toastify.esm-74b3f8e7.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_usability-49a819c3.js": {
-    "file": "assets/usability-49a819c3.js"
+  "_usability-238ba6d1.js": {
+    "file": "assets/usability-238ba6d1.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
   },
   "resources/js/Pages/Admin/Dosen.jsx": {
-    "file": "assets/Dosen-2914a30d.js",
+    "file": "assets/Dosen-f7599742.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-59226117.js",
-      "_react-toastify.esm-66757944.js"
+      "_AuthenticatedLayout-44cdb6db.js",
+      "_react-toastify.esm-74b3f8e7.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Dosen.jsx"
   },
   "resources/js/Pages/Admin/Mahasiswa.jsx": {
-    "file": "assets/Mahasiswa-ff683771.js",
+    "file": "assets/Mahasiswa-d9a6af0c.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-59226117.js",
-      "_usability-49a819c3.js",
-      "_react-toastify.esm-66757944.js"
+      "_AuthenticatedLayout-44cdb6db.js",
+      "_usability-238ba6d1.js",
+      "_react-toastify.esm-74b3f8e7.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Mahasiswa.jsx"
   },
   "resources/js/Pages/Admin/Materi.jsx": {
-    "file": "assets/Materi-72a6db13.js",
+    "file": "assets/Materi-0666f853.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-59226117.js",
-      "_react-toastify.esm-66757944.js",
-      "_usability-49a819c3.js"
+      "_AuthenticatedLayout-44cdb6db.js",
+      "_react-toastify.esm-74b3f8e7.js",
+      "_usability-238ba6d1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Materi.jsx"
   },
-  "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-d8b8b562.js",
+  "resources/js/Pages/Admin/Tugas.jsx": {
+    "file": "assets/Tugas-d6aab8e6.js",
     "imports": [
       "resources/js/app.jsx",
-      "_react-toastify.esm-66757944.js"
+      "_usability-238ba6d1.js",
+      "_AuthenticatedLayout-44cdb6db.js",
+      "_react-toastify.esm-74b3f8e7.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Admin/Tugas.jsx"
+  },
+  "resources/js/Pages/Auth/Login.jsx": {
+    "file": "assets/Login-4c11a4ba.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_react-toastify.esm-74b3f8e7.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.jsx"
   },
   "resources/js/Pages/Dashboard.jsx": {
-    "file": "assets/Dashboard-f54c9536.js",
+    "file": "assets/Dashboard-a82a7dd2.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-59226117.js",
-      "_react-toastify.esm-66757944.js"
+      "_AuthenticatedLayout-44cdb6db.js",
+      "_react-toastify.esm-74b3f8e7.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Dashboard.jsx"
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome-d2f385d5.js",
+    "file": "assets/Welcome-c642b5e6.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -75,22 +89,23 @@
     "src": "resources/js/Pages/Welcome.jsx"
   },
   "resources/js/app.css": {
-    "file": "assets/app-f9678636.css",
+    "file": "assets/app-c5ccd086.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.jsx": {
     "css": [
-      "assets/app-f9678636.css"
+      "assets/app-c5ccd086.css"
     ],
     "dynamicImports": [
       "resources/js/Pages/Admin/Dosen.jsx",
       "resources/js/Pages/Admin/Mahasiswa.jsx",
       "resources/js/Pages/Admin/Materi.jsx",
+      "resources/js/Pages/Admin/Tugas.jsx",
       "resources/js/Pages/Auth/Login.jsx",
       "resources/js/Pages/Dashboard.jsx",
       "resources/js/Pages/Welcome.jsx"
     ],
-    "file": "assets/app-1158bfae.js",
+    "file": "assets/app-81dcd428.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }

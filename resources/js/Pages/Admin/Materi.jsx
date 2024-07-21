@@ -1,6 +1,6 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout'
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import { MdDelete, MdEdit, MdFileOpen, MdFileUpload, MdGridView, MdReadMore, MdViewList } from 'react-icons/md'
+import { MdDelete, MdDownload, MdEdit, MdFileOpen, MdFileUpload, MdGridView, MdReadMore, MdViewList } from 'react-icons/md'
 import { HiDotsVertical } from "react-icons/hi";
 import { formatDate } from '@/Service/usability';
 import { router, useForm } from '@inertiajs/react';
@@ -59,6 +59,7 @@ const List = () => {
                                     <div tabIndex={0} role="button" className="btn btn-ghost"><HiDotsVertical /></div>
                                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                                         <li className='border-b'><a><MdReadMore /> Lihat Materi</a></li>
+                                        <li className='border-b'><a href={`/storage/${item.file}`} download={item.judul}><MdDownload /> Unduh Materi</a></li>
                                         <li className='border-b'><button onClick={() => {
                                             setEdit(item)
                                             document.getElementById('modal-edit').showModal()

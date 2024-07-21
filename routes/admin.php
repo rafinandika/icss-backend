@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\MahasiswaController;
 use App\Http\Controllers\Admin\MateriController;
+use App\Http\Controllers\Admin\TugasController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +27,11 @@ Route::prefix('materi') -> group(function () {
     Route::post('/', [MateriController::class, 'store'])->name('materi.store');
     Route::put('{id}', [MateriController::class, 'update'])->name('materi.update');
     Route::delete('{id}', [MateriController::class, 'destroy'])->name('materi.destroy');
+});
+
+Route::prefix('tugas') -> group(function () {
+    Route::get('/', [TugasController::class, 'index'])->name('tugas');
+    Route::post('/', [TugasController::class, 'store'])->name('tugas.store');
+    Route::put('{id}', [TugasController::class, 'update'])->name('tugas.update');
+    Route::delete('{id}', [TugasController::class, 'destroy'])->name('tugas.destroy');
 });

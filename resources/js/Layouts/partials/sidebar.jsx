@@ -28,9 +28,9 @@ const Sidebar = () => {
                     <MenuItem path="/dosen" label={'Dosen'} icon={<MdOutlinePeople size={20} />} />
                     <MenuItem path="/materi" label={'Materi'} icon={<MdOutlineFileOpen size={20} />} />
                     <MenuItem path="/tugas" label={'Tugas'} icon={<MdDocumentScanner size={20} />} />
-                    <MenuItem path="/forum" label={'Forum'} icon={<MdForum size={20} />} />
+                    {/* <MenuItem path="/forum" label={'Forum'} icon={<MdForum size={20} />} /> */}
                     {/* <MenuItem path="/sejarah" label={'Sejarah'} icon={<MdOutlineHistory size={20} />} /> */}
-                    <MenuItem path="/matrix" label={'Matrix'} icon={<MdOutlineBarChart size={20} />} />
+                    {/* <MenuItem path="/matrix" label={'Matrix'} icon={<MdOutlineBarChart size={20} />} /> */}
                 </div>
                 <div className='flex flex-row bg-gray-100 p-5 gap-4 items-center '>
                     <img src={`/storage/${user.foto}`} className='h-12' alt="" />

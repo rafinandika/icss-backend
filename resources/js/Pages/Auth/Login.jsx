@@ -6,14 +6,21 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
     const [password, setPassword] = useState(true);
-    const {data, setData, post, processing, errors, reset} = useForm({
+    const { data, setData, post, processing, errors, reset } = useForm({
         email: '',
         password: '',
     });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        post(route('login'));
+        post(route('login'), {
+            onSuccess: () => {
+                reset('password');
+                setPassword(true);
+            },
+            onError: () => toast.error('Email atau password salah')
+            
+        });
     }
 
     return (
@@ -31,7 +38,7 @@ const Login = () => {
                                 className="grow border-none focus:ring-0"
                                 placeholder="Masukan email atau username"
                                 onChange={(e) => setData('email', e.target.value)}
-                                />
+                            />
                         </label>
                         <label className="input input-bordered flex items-center gap-2 mb-8">
                             <FaKey />
@@ -39,9 +46,9 @@ const Login = () => {
                                 type={!password ? "text" : "password"}
                                 value={data.password}
                                 className="grow border-none focus:ring-0"
-                                placeholder="Masukan password" 
+                                placeholder="Masukan password"
                                 onChange={(e) => setData('password', e.target.value)}
-                                />
+                            />
                             <button onClick={() => setPassword(!password)}>
                                 {!password ? <FaEyeSlash /> : <FaEye />}
                             </button>

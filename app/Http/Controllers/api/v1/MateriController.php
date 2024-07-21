@@ -22,4 +22,15 @@ class MateriController extends Controller
         $materi['file'] = url('storage/'.$materi['file']);
             return ResponseHelpers::success("Berhasil mengambil data materi", $materi);
     }
+
+    public function search(Request $request){
+        $results = Materi::where('judul', 'like', "%$request->q%")->get();
+        if($results->count() === 0){
+            return ResponseHelpers::success("Berhasil mengambil data materi", []);
+        }
+        foreach ($results as &$item) {
+            $item['file'] = url('storage/'.$item['file']);
+        }
+        return ResponseHelpers::success("Berhasil mengambil data materi", $results);
+    }
 }

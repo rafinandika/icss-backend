@@ -20,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/login', [AuthController::class, 'login']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::get('/email-reset-password/{email}', [AuthController::class, 'emailresetpassword']);
+Route::post('/cek-kode-reset-password', [AuthController::class, 'koderesetpassword']);
+Route::post('/reset-password', [AuthController::class, 'resetpassword']);
 
 Route::prefix('user')->middleware('auth:sanctum')->group(function () {
     Route::get('/me', function (Request $request) {
@@ -27,9 +31,13 @@ Route::prefix('user')->middleware('auth:sanctum')->group(function () {
     });
 });
 
+
 Route::get('/dosen', [DosenController::class, 'index']);
-Route::get('/materi', [MateriController::class, 'index']);
-Route::get('/materi/{id}', [MateriController::class, 'detail']);
+Route::prefix('materi')->middleware('auth:sanctum')->group(function () {
+    Route::get('/', [MateriController::class, 'index']);
+    Route::get('/{id}', [MateriController::class, 'detail']);
+    Route::post('/search', [MateriController::class, 'search']);
+});
 
 Route::prefix('/dosen')->middleware('auth:sanctum')->group(function () {
     Route::get('/list', [DosenController::class, 'index']);

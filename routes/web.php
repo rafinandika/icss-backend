@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Mail\ResetPassword;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -29,6 +31,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     require __DIR__.'/admin.php';
+});
+
+Route::get('/test-mail', function () {
+    $name = "Rafin Andika";
+
+    Mail::to('dev.rafin@gmail.com')->send(new ResetPassword($name, "12345"));
 });
 
 require __DIR__.'/auth.php';
