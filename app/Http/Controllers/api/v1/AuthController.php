@@ -127,7 +127,14 @@ class AuthController extends Controller
             'email' => $request->email,
             'username' => $request->username,
             'password' => bcrypt($request->password),
+            'is_admin' => 0,
+            'is_dosen' => 0,
+            'aktif' => 0,
+            'foto' => 'foto-user/default.png',
         ]);
+
+        $token = $user->createToken('bml token')->plainTextToken;
+        $user['token'] = $token;
         if ($user) {
             return ResponseHelpers::success('Registrasi Berhasil', $user);
         }
