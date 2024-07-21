@@ -3,8 +3,10 @@
 
 use App\Http\Controllers\api\v1\AuthController;
 use App\Http\Controllers\api\v1\DosenController;
+use App\Http\Controllers\api\v1\EvaluasiController;
 use App\Http\Controllers\api\v1\MateriController;
 use App\Http\Controllers\api\v1\UserController;
+use App\Models\Evaluasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -43,3 +45,10 @@ Route::prefix('/dosen')->middleware('auth:sanctum')->group(function () {
     Route::get('/list', [DosenController::class, 'index']);
     Route::get('/detail/{id}', [DosenController::class, 'detail']);
 });
+
+Route::prefix('/evaluasi')->middleware('auth:sanctum')->group(function () {
+    Route::get('/', [EvaluasiController::class, 'list']);
+    Route::get('{id}', [EvaluasiController::class, 'detail']);
+    Route::post('submit', [EvaluasiController::class, 'submit']);
+});
+
