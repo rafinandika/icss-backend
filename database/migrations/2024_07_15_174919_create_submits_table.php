@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('evaluasi_id')->references('id')->on('evaluasis');
             $table->string('type');
             $table->string('file');
-            $table->string('deskripsi')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }

@@ -49,7 +49,7 @@ const Login = () => {
                                 placeholder="Masukan password"
                                 onChange={(e) => setData('password', e.target.value)}
                             />
-                            <button onClick={() => setPassword(!password)}>
+                            <button type='button'   onClick={() => setPassword(!password)}>
                                 {!password ? <FaEyeSlash /> : <FaEye />}
                             </button>
                         </label>

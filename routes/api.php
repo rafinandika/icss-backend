@@ -1,12 +1,11 @@
 <?php
 
-
+use App\Helpers\ResponseHelpers;
 use App\Http\Controllers\api\v1\AuthController;
+use App\Http\Controllers\api\v1\DiskusiController;
 use App\Http\Controllers\api\v1\DosenController;
 use App\Http\Controllers\api\v1\EvaluasiController;
 use App\Http\Controllers\api\v1\MateriController;
-use App\Http\Controllers\api\v1\UserController;
-use App\Models\Evaluasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,15 +28,15 @@ Route::post('/reset-password', [AuthController::class, 'resetpassword']);
 
 Route::prefix('user')->middleware('auth:sanctum')->group(function () {
     Route::get('/me', function (Request $request) {
-        return $request->user();
+        return ResponseHelpers::success('Success', $request->user());
     });
 });
 
-
 Route::get('/dosen', [DosenController::class, 'index']);
+
 Route::prefix('materi')->middleware('auth:sanctum')->group(function () {
     Route::get('/', [MateriController::class, 'index']);
-    Route::get('/{id}', [MateriController::class, 'detail']);
+    Route::get('{id}', [MateriController::class, 'detail']);
     Route::post('/search', [MateriController::class, 'search']);
 });
 
@@ -50,5 +49,7 @@ Route::prefix('/evaluasi')->middleware('auth:sanctum')->group(function () {
     Route::get('/', [EvaluasiController::class, 'list']);
     Route::get('{id}', [EvaluasiController::class, 'detail']);
     Route::post('submit', [EvaluasiController::class, 'submit']);
+    Route::get('submit/{id}', [EvaluasiController::class, 'listsubmit']);
 });
 
+Route::post('/diskusi', [DiskusiController::class, 'store'])->middleware('auth:sanctum');

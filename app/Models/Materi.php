@@ -14,4 +14,8 @@ class Materi extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function diskusi() {
+        return $this->hasMany(Comment::class);
+    }
 }

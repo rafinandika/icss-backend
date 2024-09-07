@@ -33,6 +33,7 @@ class TugasController extends Controller
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
             'type' => $request->type,
+            'submit_type' => $request->submit_type,
             'file' => $request->type === 'file' ? $request->file('file')->store('tugas') : null,
             'pertanyaan' => $request->type === 'file' ? null : json_encode($request->pertanyaan),
             'waktu_akhir' => $request->waktu_akhir,

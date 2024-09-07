@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('judul');
             $table->text('deskripsi');
             $table->string('type');
+            $table->string('submit_type')->default('file');
             $table->string('file')->nullable();
             $table->json('pertanyaan')->nullable();
             $table->date('waktu_akhir');

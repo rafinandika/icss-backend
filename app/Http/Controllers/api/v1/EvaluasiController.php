@@ -24,8 +24,6 @@ class EvaluasiController extends Controller
         if ($evaluasi['type'] === 'file') $evaluasi['file'] = url('storage/' . $evaluasi['file']);
         else $evaluasi['pertanyaan'] = json_decode($evaluasi['pertanyaan']);
         $submit = Submit::where(['evaluasi_id' => $id, 'user_id' => auth()->user()->id])->first();
-        if ($submit !== null) $submit['comment'] = Comment::with('user')->where('submit_id', $submit['id'])->latest()->get();
-        if ($submit !== null && $submit['type'] === 'file') $submit['file'] = url('storage/' . $submit['file']);
         $evaluasi['submit'] = $submit;
 
         return ResponseHelpers::success("Berhasil mengambil data evaluasi", $evaluasi);
@@ -40,5 +38,10 @@ class EvaluasiController extends Controller
             'deskripsi' => $request->deskripsi
         ]);
         return ResponseHelpers::success("Berhasil mengirimkan evaluasi", null, 201);
+    }
+
+    public function listsubmit($id){
+        $submit = Submit::with('user')->where('evaluasi_id', $id)->paginate(10);
+        return ResponseHelpers::success("Berhasil mengambil data evaluasi", $submit);
     }
 }

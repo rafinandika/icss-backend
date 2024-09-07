@@ -36,6 +36,7 @@ const TypeFile = () => {
         deskripsi: null,
         type: 'file',
         file: null,
+        submit_type: 'file',
         pertanyaan: null,
         waktu_akhir: formatDate(new Date(), false),
         aktif: true
@@ -133,6 +134,25 @@ const TypeFile = () => {
                 </div>
                 <div className="grid grid-cols-12">
                     <label htmlFor="exampleFormControlInput1" className="form-label col-span-2 font-bold">
+                        Bentuk Tugas
+                    </label>
+                    <div className="col-span-10 flex flex-row">
+                        <div className="form-control me-8">
+                            <label className="label cursor-pointer">
+                                <input type="radio" value={'file'} name="radio-10" onChange={(e) => setData('submit_type', e.target.value)} className="radio checked:bg-red-500 me-6" defaultChecked />
+                                <span className="label-text">Dokumen</span>
+                            </label>
+                        </div>
+                        <div className="form-control">
+                            <label className="label cursor-pointer">
+                                <input type="radio" value={'video'} onChange={(e) => setData('submit_type', e.target.value)} name="radio-10" className="radio checked:bg-blue-500 me-6" />
+                                <span className="label-text">Video Praktik</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div className="grid grid-cols-12">
+                    <label htmlFor="exampleFormControlInput1" className="form-label col-span-2 font-bold">
                         Deskripsi
                     </label>
                     <textarea
@@ -178,6 +198,7 @@ const TypeList = () => {
         type: 'list',
         file: null,
         pertanyaan: [''],
+        submit_type: 'file',
         waktu_akhir: formatDate(new Date(), false),
         aktif: true
     });
@@ -261,6 +282,25 @@ const TypeList = () => {
                     <button type="button" className="btn btn-info text-white text-nowrap col-span-2 btn-sm" onClick={() => setData('pertanyaan', [...data.pertanyaan, ''])}>
                         <MdAdd />  Tambah Soal
                     </button>
+                </div>
+                <div className="grid grid-cols-12">
+                    <label htmlFor="exampleFormControlInput1" className="form-label col-span-2 font-bold">
+                        Bentuk Tugas
+                    </label>
+                    <div className="col-span-10 flex flex-row">
+                        <div className="form-control me-8">
+                            <label className="label cursor-pointer">
+                                <input type="radio" value={'file'} name="typesubmit" onChange={(e) => setData('submit_type', e.target.value)} className="radio checked:bg-red-500 me-6" defaultChecked />
+                                <span className="label-text">Dokumen</span>
+                            </label>
+                        </div>
+                        <div className="form-control">
+                            <label className="label cursor-pointer">
+                                <input type="radio" value={'video'} onChange={(e) => setData('submit_type', e.target.value)} name="typesubmit" className="radio checked:bg-blue-500 me-6" />
+                                <span className="label-text">Video Praktik</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div className="grid grid-cols-12">
                     <label htmlFor="exampleFormControlInput1" className="form-label col-span-2 font-bold">
