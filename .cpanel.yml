@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/u1734212/public_html/bml.koniprovbkl.or.id/
+    - export DEPLOYPATH=/home/u1734212/public_html/sic.bogyrestu.com/
     - /bin/cp .editorconfig $DEPLOYPATH
     - /bin/cp .env.example $DEPLOYPATH
     - /bin/cp artisan $DEPLOYPATH
