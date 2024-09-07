@@ -87,6 +87,7 @@ const ModalAdd = () => {
         deskripsi: '',
         file: '',
         type: '',
+        video: null,
     })
 
     const [errors, setError] = useState({});
@@ -184,6 +185,15 @@ const ModalAdd = () => {
                         <div className='flex flex-col'>
                             <input
                                 type="text"
+                                value={data.video}
+                                onChange={e => setData('video', e.target.value)}
+                                placeholder="Tambahkan video (opsional)"
+                                className="input input-bordered w-full" />
+                            <span className="text-red-500 text-sm">*Pastikan url video valid, dengan format https://</span>
+                        </div>
+                        <div className='flex flex-col'>
+                            <input
+                                type="text"
                                 value={data.deskripsi}
                                 onChange={e => setData('deskripsi', e.target.value)}
                                 placeholder="Deskripsi singkat"
@@ -206,6 +216,7 @@ const ModalEdit = () => {
         judul: '',
         deskripsi: '',
         file: null,
+        video: null,
         type: '',
     })
 
@@ -215,7 +226,8 @@ const ModalEdit = () => {
             ...data,
             judul: edit.judul,
             deskripsi: edit.deskripsi,
-            type: edit.type
+            type: edit.type,
+            video: edit.video
         })
     }, [edit])
 
@@ -315,6 +327,15 @@ const ModalEdit = () => {
                             <p>{displayName === '' ? `${data.judul}.${data.type}` : displayName}</p>
                         </div>
                         <span className={errors['file'] ? "text-red-500 text-sm" : "hidden"}>{errors['file']}</span>
+                        <div className='flex flex-col'>
+                            <input
+                                type="text"
+                                value={data.video}
+                                onChange={e => setData('video', e.target.value)}
+                                placeholder="Tambahkan video (opsional)"
+                                className="input input-bordered w-full" />
+                            <span className="text-red-500 text-sm">*Pastikan url video valid, dengan format https://</span>
+                        </div>
                         <div className='flex flex-col'>
                             <input
                                 type="text"

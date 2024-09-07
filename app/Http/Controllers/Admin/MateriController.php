@@ -23,6 +23,7 @@ class MateriController extends Controller
         $materi = Materi::create([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
+            'video' => $request->video,
             'file' => $request->file('file')->store('materi'),
             'type' => $request->type
         ]);
@@ -42,6 +43,7 @@ class MateriController extends Controller
         $data = [
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
+            'video' => $request->video,
             'type' => $request->type
         ];
 
