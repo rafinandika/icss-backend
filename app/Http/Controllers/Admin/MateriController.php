@@ -15,7 +15,6 @@ class MateriController extends Controller
     public function index()
     {
         $materi = Materi::latest()->paginate(10);
-        $materi->sortBy('judul', 'desc');
         return Inertia::render('Admin/Materi', ['materi' => $materi]);
     }
 
