@@ -15,6 +15,7 @@ class MateriController extends Controller
     public function index()
     {
         $materi = Materi::latest()->paginate(10);
+        $materi->sortBy('judul', 'desc');
         return Inertia::render('Admin/Materi', ['materi' => $materi]);
     }
 
@@ -52,7 +53,6 @@ class MateriController extends Controller
         }
         $materi->update($data);
         if ($materi) {
-            Storage::delete($fileNow);
             return redirect()->back()->with("success", "Materi updated successfully");
         }
         return redirect()->back()->withErrors(["error" => "Terjadi kesalahan sistem"]);
