@@ -24,8 +24,8 @@ const Sidebar = () => {
                 </div>
                 <div className='flex flex-col gap-2 flex-grow p-5 px-3 overflow-y-auto text-gray-700 scrollbar-thin'>
                     <MenuItem path="/dashboard" label={'Dashboard'} icon={<MdOutlineSpaceDashboard size={20} />} />
-                    <MenuItem path="/mahasiswa" label={'Mahasiswa'} icon={<MdPeopleOutline size={20} />} />
-                    <MenuItem path="/dosen" label={'Dosen'} icon={<MdOutlinePeople size={20} />} />
+                    <MenuItem path="/mahasiswa" label={'Peserta'} icon={<MdPeopleOutline size={20} />} />
+                    <MenuItem path="/dosen" label={'Instruktur'} icon={<MdOutlinePeople size={20} />} />
                     <MenuItem path="/materi" label={'Integrated Circuit'} icon={<MdOutlineFileOpen size={20} />} />
                     <MenuItem path="/tugas" label={'Evaluasi'} icon={<MdDocumentScanner size={20} />} />
                     {/* <MenuItem path="/forum" label={'Forum'} icon={<MdForum size={20} />} /> */}
