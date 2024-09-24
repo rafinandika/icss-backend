@@ -26,8 +26,8 @@ const Sidebar = () => {
                     <MenuItem path="/dashboard" label={'Dashboard'} icon={<MdOutlineSpaceDashboard size={20} />} />
                     <MenuItem path="/mahasiswa" label={'Mahasiswa'} icon={<MdPeopleOutline size={20} />} />
                     <MenuItem path="/dosen" label={'Dosen'} icon={<MdOutlinePeople size={20} />} />
-                    <MenuItem path="/materi" label={'Materi'} icon={<MdOutlineFileOpen size={20} />} />
-                    <MenuItem path="/tugas" label={'Tugas'} icon={<MdDocumentScanner size={20} />} />
+                    <MenuItem path="/materi" label={'Integrated Circuit'} icon={<MdOutlineFileOpen size={20} />} />
+                    <MenuItem path="/tugas" label={'Evaluasi'} icon={<MdDocumentScanner size={20} />} />
                     {/* <MenuItem path="/forum" label={'Forum'} icon={<MdForum size={20} />} /> */}
                     {/* <MenuItem path="/sejarah" label={'Sejarah'} icon={<MdOutlineHistory size={20} />} /> */}
                     {/* <MenuItem path="/matrix" label={'Matrix'} icon={<MdOutlineBarChart size={20} />} /> */}

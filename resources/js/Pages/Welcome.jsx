@@ -24,7 +24,7 @@ const Welcome = () => {
                 </div>
                 <div className='flex flex-col justify-center items-center text-center w-1/2 '>
                     <img src="/images/icon.png" className='h-40 w-40' alt="Logo BML" />
-                    <h1 className='text-3xl font-bold'>Badminton Mobile Learning</h1>
+                    <h1 className='text-3xl font-bold'>Intergrated Circuit Sport Sience (ICSS)</h1>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
                         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
                         fugiat veniam occaecat fugiat aliqua.

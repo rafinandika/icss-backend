@@ -15,7 +15,7 @@ const Materi = ({ materi }) => {
         <AuthenticatedLayout>
             <div className="flex font-bold text-3xl justify-between gap-2 border-b p-4">
                 <div className="flex">
-                    <MdFileOpen size={37} /> Materi
+                    <MdFileOpen size={37} /> Intergrated Circuit Sport Sience
                 </div>
                 <div className="flex justify-between mb-4">
                     <div></div>
@@ -58,12 +58,12 @@ const List = () => {
                                 <div className="dropdown dropdown-bottom ms-auto">
                                     <div tabIndex={0} role="button" className="btn btn-ghost"><HiDotsVertical /></div>
                                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                                        <li className='border-b'><a><MdReadMore /> Lihat Materi</a></li>
-                                        <li className='border-b'><a href={`/storage/${item.file}`} download={item.judul}><MdDownload /> Unduh Materi</a></li>
+                                        <li className='border-b'><a><MdReadMore /> Lihat Circuit</a></li>
+                                        <li className='border-b'><a href={`/storage/${item.file}`} download={item.judul}><MdDownload /> Unduh Circuit</a></li>
                                         <li className='border-b'><button onClick={() => {
                                             setEdit(item)
                                             document.getElementById('modal-edit').showModal()
-                                        }}><MdEdit /> Edit Materi</button></li>
+                                        }}><MdEdit /> Edit Circuit</button></li>
                                         <li><button onClick={() => {
                                             setDelete(item)
                                             document.getElementById('modal-delete').showModal()
@@ -159,7 +159,7 @@ const ModalAdd = () => {
     return (
         <dialog id="modal-add" className="modal">
             <div className="modal-box">
-                <h3 className="font-bold text-lg flex items-center"><MdFileUpload /> Unggah Materi</h3>
+                <h3 className="font-bold text-lg flex items-center"><MdFileUpload /> Unggah Integrated Circuit</h3>
                 <form onSubmit={handleSubmit}>
                     <div className='flex flex-col gap-5 w-full mt-5'>
                         <div className='flex flex-col'>
@@ -304,7 +304,7 @@ const ModalEdit = () => {
     return (
         <dialog id="modal-edit" className="modal">
             <div className="modal-box">
-                <h3 className="font-bold text-lg flex items-center"><MdFileUpload /> Edit Materi</h3>
+                <h3 className="font-bold text-lg flex items-center"><MdFileUpload /> Edit Integrated Circuit</h3>
                 <form onSubmit={handleSubmit}>
                     <div className='flex flex-col gap-5 w-full mt-5'>
                         <div className='flex flex-col'>

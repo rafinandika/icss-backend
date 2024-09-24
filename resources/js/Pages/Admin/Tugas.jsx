@@ -23,7 +23,7 @@ const Tugas = ({ tugas }) => {
     return (
         <AuthenticatedLayout>
             <div className="flex font-bold text-3xl gap-2 border-b p-4">
-                <MdDocumentScanner size={37} /> Tugas
+                <MdDocumentScanner size={37} /> Evaluasi
             </div>
             {(view.type === 'list' || view.type === 'kosong') && (
                 <div className="flex justify-end my-3 mt-10">
@@ -31,12 +31,12 @@ const Tugas = ({ tugas }) => {
                         onClick={() => setView({ type: 'add', data: null })}
                         className="btn btn-info rounded-xl text-white"
                     >
-                        <MdAdd size={20} /> Tambah Tugas
+                        <MdAdd size={20} /> Tambah Evaluasi
                     </button>
                 </div>
             )}
             {view.type === 'loading' && <Basic title="Memuat data..." spinner={true} />}
-            {view.type === 'kosong' && <Basic title="Data tugas masih kosong" spinner={false} />}
+            {view.type === 'kosong' && <Basic title="Data evaluasi masih kosong" spinner={false} />}
             {view.type === 'add' && <Add />}
             <TugasContext.Provider value={{ view, setView, del, setDelete }}>
                 {view.type === 'list' && <List list={view.data} />}
