@@ -52,4 +52,7 @@ Route::prefix('/evaluasi')->middleware('auth:sanctum')->group(function () {
     Route::get('submit/{id}', [EvaluasiController::class, 'listsubmit']);
 });
 
+Route::get('/diskusi/eval/{id}', [DiskusiController::class, 'evalget'])->middleware('auth:sanctum');
+Route::post('/diskusi/eval', [DiskusiController::class, 'evalstore'])->middleware('auth:sanctum');
+
 Route::post('/diskusi', [DiskusiController::class, 'store'])->middleware('auth:sanctum');
