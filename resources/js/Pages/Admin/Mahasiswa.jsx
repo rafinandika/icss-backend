@@ -56,7 +56,7 @@ const List = () => {
                                         <input type="checkbox" className="checkbox" />
                                     </label>
                                 </th>
-                                <th>Mahasiwa</th>
+                                <th>Atlet</th>
                                 <th>Email</th>
                                 <th>Status</th>
                                 <th></th>

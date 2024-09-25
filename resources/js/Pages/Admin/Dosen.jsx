@@ -21,13 +21,13 @@ const Dosen = ({ dosen }) => {
     return (
         <AuthenticatedLayout>
             <div className="flex font-bold text-3xl gap-2 border-b p-4">
-                <MdOutlinePeople size={37} /> Dosen
+                <MdOutlinePeople size={37} /> Instruktur
             </div>
             {(view.type === 'list' || view.type === 'kosong') &&
                 <div className='flex justify-end my-3 mt-10'>
                     <button onClick={() => setView({ type: 'add', data: null })}
                         className='btn btn-primary rounded-xl text-white'>
-                        <MdOutlinePersonAdd size={20} />Tambah Dosen
+                        <MdOutlinePersonAdd size={20} />Tambah Instruktur
                     </button>
                 </div>
             }
@@ -72,7 +72,7 @@ const List = () => {
                                         <input type="checkbox" className="checkbox" />
                                     </label>
                                 </th>
-                                <th>Dosen</th>
+                                <th>Instruktur</th>
                                 <th>Email</th>
                                 <th>Status</th>
                                 <th></th>
@@ -133,7 +133,7 @@ const ModalDelete = () => {
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
                 <div className='text-center mt-10'>
-                    <p className='text-center'>Apakah anda yakin ingin menghapus data dosen?</p>
+                    <p className='text-center'>Apakah anda yakin ingin menghapus data instruktur?</p>
                     <p className='text-center font-bold'>"{del?.nama}"</p>
                     <div className='text-center'>
                         <button className='btn btn-error rounded-full mt-5 px-5' onClick={() => document.getElementById('modal-delete').close()}>Batal</button>
