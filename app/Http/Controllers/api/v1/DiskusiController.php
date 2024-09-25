@@ -42,7 +42,7 @@ class DiskusiController extends Controller
     public function evalstore(Request $request){
         $data = [
             'user_id' => $request->user()->id,
-            'submit_id' => $request->materi_id,
+            'submit_id' => $request->submit_id,
             'comment' => $request->comment,
             'parent' => $request->parent
         ];
