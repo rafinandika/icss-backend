@@ -20,12 +20,12 @@ const Mahasiswa = ({ mahasiswa }) => {
     return (
         <AuthenticatedLayout>
             <div className="flex font-bold text-3xl gap-2 border-b p-4">
-                <MdPeopleOutline size={37} /> Mahasiswa
+                <MdPeopleOutline size={37} /> Atlet
             </div>
             <div className='flex justify-end my-3 mt-10'>
                 <button onClick={() => document.getElementById('modal-add').showModal()}
                     className='btn btn-primary rounded-xl text-white'>
-                    <MdOutlinePersonAdd size={20} /> Mahasiswa
+                    <MdOutlinePersonAdd size={20} /> Atlet
                 </button>
             </div>
             <MahasiswaContext.Provider value={{ mahasiswa, edit, setEdit, del, setDel }}>
@@ -43,7 +43,7 @@ const List = () => {
     return (
         <div className="card bg-base-100 text-center shadow-xl">
             <div className='bg-gray-700 text-center text-white rounded-t-lg p-2'>
-                Daftar Mahasiswa
+                Daftar Atlet
             </div>
             <div className="card-body">
                 <div className="overflow-x-auto">
@@ -154,7 +154,7 @@ const ModalAdd = () => {
                     {/* if there is a button in form, it will close the modal */}
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
-                <h3 className="font-bold text-lg flex flex-row items-center gap-3 modal-title"><MdOutlinePersonAdd /> Tambah Mahasiswa</h3>
+                <h3 className="font-bold text-lg flex flex-row items-center gap-3 modal-title"><MdOutlinePersonAdd /> Tambah Atlet</h3>
                 <form onSubmit={handleSubmit}>
                     <label className="form-control w-full mt-4">
                         <div className="label">
@@ -167,7 +167,7 @@ const ModalAdd = () => {
                             placeholder="Nama mahasiswa"
                             className="input input-bordered w-full" />
                         <div className="label">
-                            <span className={`label-text-alt text-red-500 ${errors.name ? "visible" : "hidden"}`}>Nama mahasiswa tidak boleh kosong</span>
+                            <span className={`label-text-alt text-red-500 ${errors.name ? "visible" : "hidden"}`}>Nama atlet tidak boleh kosong</span>
                         </div>
                     </label>
                     <label className="form-control w-full">
@@ -271,7 +271,7 @@ const ModalEdit = () => {
                     {/* if there is a button in form, it will close the modal */}
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
-                <h3 className="font-bold text-lg flex flex-row items-center gap-3 modal-title"><MdOutlinePersonAdd /> Edit Mahasiswa</h3>
+                <h3 className="font-bold text-lg flex flex-row items-center gap-3 modal-title"><MdOutlinePersonAdd /> Edit Atlet</h3>
                 <form onSubmit={handleSubmit}>
                     <label className="form-control w-full mt-4">
                         <div className="label">
@@ -284,7 +284,7 @@ const ModalEdit = () => {
                             placeholder="Nama mahasiswa"
                             className="input input-bordered w-full" />
                         <div className="label">
-                            <span className={`label-text-alt text-red-500 ${errors.name ? "visible" : "hidden"}`}>Nama mahasiswa tidak boleh kosong</span>
+                            <span className={`label-text-alt text-red-500 ${errors.name ? "visible" : "hidden"}`}>Nama atlet tidak boleh kosong</span>
                         </div>
                     </label>
                     <label className="form-control w-full">

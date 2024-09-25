@@ -1,87 +1,87 @@
 {
-  "_AuthenticatedLayout-c685a764.js": {
-    "file": "assets/AuthenticatedLayout-c685a764.js",
+  "_AuthenticatedLayout-d3210451.js": {
+    "file": "assets/AuthenticatedLayout-d3210451.js",
     "imports": [
       "resources/js/app.jsx",
-      "_react-toastify.esm-95969647.js"
+      "_react-toastify.esm-7d1e44d9.js"
     ]
   },
-  "_react-toastify.esm-95969647.js": {
-    "file": "assets/react-toastify.esm-95969647.js",
+  "_react-toastify.esm-7d1e44d9.js": {
+    "file": "assets/react-toastify.esm-7d1e44d9.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_usability-8d4f7ccc.js": {
-    "file": "assets/usability-8d4f7ccc.js",
+  "_usability-ff48eadc.js": {
+    "file": "assets/usability-ff48eadc.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Admin/Dosen.jsx": {
-    "file": "assets/Dosen-86fd7dd3.js",
+    "file": "assets/Dosen-744ad9d5.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-c685a764.js",
-      "_react-toastify.esm-95969647.js"
+      "_AuthenticatedLayout-d3210451.js",
+      "_react-toastify.esm-7d1e44d9.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Dosen.jsx"
   },
   "resources/js/Pages/Admin/Mahasiswa.jsx": {
-    "file": "assets/Mahasiswa-91044a9d.js",
+    "file": "assets/Mahasiswa-2da34edc.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-c685a764.js",
-      "_usability-8d4f7ccc.js",
-      "_react-toastify.esm-95969647.js"
+      "_AuthenticatedLayout-d3210451.js",
+      "_usability-ff48eadc.js",
+      "_react-toastify.esm-7d1e44d9.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Mahasiswa.jsx"
   },
   "resources/js/Pages/Admin/Materi.jsx": {
-    "file": "assets/Materi-64932a86.js",
+    "file": "assets/Materi-fc5f269c.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-c685a764.js",
-      "_react-toastify.esm-95969647.js",
-      "_usability-8d4f7ccc.js"
+      "_AuthenticatedLayout-d3210451.js",
+      "_react-toastify.esm-7d1e44d9.js",
+      "_usability-ff48eadc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Materi.jsx"
   },
   "resources/js/Pages/Admin/Tugas.jsx": {
-    "file": "assets/Tugas-11b08419.js",
+    "file": "assets/Tugas-e2b82faf.js",
     "imports": [
       "resources/js/app.jsx",
-      "_usability-8d4f7ccc.js",
-      "_AuthenticatedLayout-c685a764.js",
-      "_react-toastify.esm-95969647.js"
+      "_usability-ff48eadc.js",
+      "_AuthenticatedLayout-d3210451.js",
+      "_react-toastify.esm-7d1e44d9.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Tugas.jsx"
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-022066f1.js",
+    "file": "assets/Login-3ca17fb5.js",
     "imports": [
       "resources/js/app.jsx",
-      "_react-toastify.esm-95969647.js"
+      "_react-toastify.esm-7d1e44d9.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.jsx"
   },
   "resources/js/Pages/Dashboard.jsx": {
-    "file": "assets/Dashboard-88be59ff.js",
+    "file": "assets/Dashboard-5a564c49.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-c685a764.js",
-      "_react-toastify.esm-95969647.js"
+      "_AuthenticatedLayout-d3210451.js",
+      "_react-toastify.esm-7d1e44d9.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Dashboard.jsx"
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome-d8208616.js",
+    "file": "assets/Welcome-a49a4856.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -105,7 +105,7 @@
       "resources/js/Pages/Dashboard.jsx",
       "resources/js/Pages/Welcome.jsx"
     ],
-    "file": "assets/app-49b359a3.js",
+    "file": "assets/app-7c591e3c.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }

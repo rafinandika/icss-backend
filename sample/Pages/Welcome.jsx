@@ -22,7 +22,7 @@ const Welcome = () => {
                 <div className="mx-auto max-w-2xl py-28">
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                         <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                            Aplikasi untuk mahasiswa.{' '}
+                            Aplikasi untuk Atlet.{' '}
                             <a href="#" className="font-semibold text-indigo-600">
                                 <span aria-hidden="true" className="absolute inset-0" />
                                 Lihat <span aria-hidden="true">&rarr;</span>

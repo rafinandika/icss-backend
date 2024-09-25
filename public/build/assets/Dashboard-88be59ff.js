@@ -1,1 +1,0 @@
-import{j as a}from"./app-49b359a3.js";import{A as s,p as t}from"./AuthenticatedLayout-c685a764.js";import"./react-toastify.esm-95969647.js";const d=()=>a.jsx(s,{children:a.jsxs("div",{className:"flex font-bold text-3xl gap-2 border-b p-4",children:[a.jsx(t,{size:37})," Dashboard"]})});export{d as default};

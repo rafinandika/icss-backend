@@ -76,7 +76,7 @@ const List = ({ list }) => {
                                 </th>
                                 <th>Tugas</th>
                                 <th>Deskripsi</th>
-                                <th>Mahasiswa</th>
+                                <th>Atlet</th>
                                 <th></th>
                             </tr>
                         </thead>
