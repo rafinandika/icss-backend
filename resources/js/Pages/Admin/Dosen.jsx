@@ -59,7 +59,7 @@ const List = () => {
     return (
         <div className="card bg-base-100 text-center shadow-xl">
             <div className='bg-gray-700 text-center text-white rounded-t-lg p-2'>
-                Daftar Dosen
+                Daftar Instruktur
             </div>
             <div className="card-body">
                 <div className="overflow-x-auto">
